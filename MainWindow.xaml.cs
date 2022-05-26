@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using System.Windows.Media.Effects;
+//using System.Windows.Shell;
+
 namespace WpfApp1
 {
     /// <summary>
@@ -33,7 +36,6 @@ namespace WpfApp1
             {
                 MessageBox.Show("Confirmed successfully");
                 Title.Text = "PTT计算";
-                MainWindow1.Title.Text = Title.Text;
                 FirstGrid.Visibility = Visibility.Collapsed;
                 PttGrid.Visibility = Visibility.Visible;
             }
