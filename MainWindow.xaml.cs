@@ -34,24 +34,27 @@ namespace WpfApp1
             string Word = FirstTextBox.Text;
             if (Word == "616")
             {
-                MessageBox.Show("Confirmed successfully");
+                Result.Text = "Confirmed successfully";
                 Title.Text = "PTT计算";
                 FirstGrid.Visibility = Visibility.Collapsed;
                 PttGrid.Visibility = Visibility.Visible;
             }
             else if (Word == "114514")
             {
-                MessageBox.Show("哼哼，啊啊啊啊啊啊啊啊啊啊啊");
+                Result.Text = "哼哼，啊啊啊啊啊啊啊啊啊啊啊";
             }
             else
             {
-                MessageBox.Show("WTF is that???");
+                Result.Text = "WTF is that???";
             }
         }
         private void CalcButton_Click(object sender, RoutedEventArgs e)
         {
-            if (DefLv.Text == "") DefLv.Text = "0";
-            if (Score.Text == "") Score.Text = "0";
+            if (DefLv.Text == "" || Score.Text == "")
+            {
+                Result.Text = "定数或分数为空";
+                return;
+            }
             double song = double.Parse(DefLv.Text);
             int score = int.Parse(Score.Text);
             double result;
@@ -77,6 +80,7 @@ namespace WpfApp1
         }
         private void MainPageButton_Click(object sender, RoutedEventArgs e)
         {
+            Result.Text = "";
             PttGrid.Visibility = Visibility.Collapsed;
             FirstGrid.Visibility = Visibility.Visible;
         }
