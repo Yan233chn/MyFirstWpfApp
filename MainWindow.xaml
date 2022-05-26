@@ -16,6 +16,24 @@
         <Style TargetType="Button">
             <Setter Property="Cursor" Value="Hand" />
         </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#7FFFFFFF"/>
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <!--<Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter Property="Background" Value="#7FFFFFFF"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>-->
+        </Style>
     </Window.Resources>
 
     <!--<WindowChrome.WindowChrome>
@@ -24,23 +42,23 @@
 
     <Grid x:Name="MainGrid" fw:PointerTracker.Enabled="True" Background="Transparent">
 
-        <Rectangle HorizontalAlignment="Center" Height="200" Stroke="DarkOrchid" VerticalAlignment="Center" Width="400" StrokeThickness="1"/>
-        <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="20,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="???" FontSize="20"/>
+        <TextBlock x:Name="Title" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,10,0,0" Width="100" Text="???" FontSize="20"/>
+        <TextBlock x:Name="Result" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Width="200" Text="" FontSize="16" TextAlignment="Center"/>
         <Button x:Name="CloseButton" Content="X" HorizontalAlignment="Right" VerticalAlignment="Top" Width="20" Height="20" Margin="0,10,10,0" Click="CloseButton_Click"/>
         <Button x:Name="MinimizeButton" Content="--" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,40,0" Width="20" Height="20" FontWeight="Normal" Click="MinimizeButton_Click"/>
 
         <Grid x:Name="FirstGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="100">
-            <TextBox x:Name="FirstTextBox" TextWrapping="Wrap" Width="160" TextAlignment="Center" FontSize="16" Height="23" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,25,0,0"/>
+            <TextBox x:Name="FirstTextBox" Width="160" TextAlignment="Center" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,24,0,0"/>
             <Button x:Name="ConfirmButton" Content="Confirm" Click="Button_Click" FontSize="16" Width="70" Height="24" HorizontalAlignment="Center" VerticalAlignment="Bottom" IsDefault="True"/>
         </Grid>
 
         <Grid x:Name="PttGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Width="380" Height="180">
-            <TextBox x:Name="DefLv" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="17" Margin="0,45,0,0"/>
-            <TextBox x:Name="Score" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="17" Margin="0,75,0,0"/>
-            <TextBox x:Name="PTT" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="17" Margin="0,105,0,0"/>
-            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Text="定数" Margin="0,45,160,0"/>
-            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Text="分数" Margin="0,75,160,0"/>
-            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Text="PTT" Margin="0,105,160,0"/>
+            <TextBox x:Name="DefLv" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,45,0,0" Width="120"/>
+            <TextBox x:Name="Score" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,75,0,0" Width="120"/>
+            <TextBox x:Name="PTT" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,105,0,0" Width="120"/>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="定数" Margin="0,45,160,0"/>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="分数" Margin="0,75,160,0"/>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="PTT" Margin="0,105,160,0"/>
             <Button x:Name="CalcButton" Content="计算" HorizontalAlignment="Center" Margin="0,135,0,0" VerticalAlignment="Top" Width="40" Click="CalcButton_Click" IsDefault="True"/>
             <Button x:Name="MainPageButton" Content="Main Page" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,20,10" Width="72" Height="20" Click="MainPageButton_Click"/>
         </Grid>
