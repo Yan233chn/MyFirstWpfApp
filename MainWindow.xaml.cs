@@ -33,8 +33,7 @@ namespace WpfApp1
                 Title.Text = "PTT计算";
                 MainWindow1.Title.Text = Title.Text;
                 FirstGrid.Visibility = Visibility.Collapsed;
-                MainPageButton.Visibility = Visibility.Visible;
-                CalcGrid.Visibility = Visibility.Visible;
+                PttGrid.Visibility = Visibility.Visible;
             }
             else if (Word == "114514")
             {
@@ -74,8 +73,7 @@ namespace WpfApp1
         }
         private void MainPageButton_Click(object sender, RoutedEventArgs e)
         {
-            CalcGrid.Visibility = Visibility.Collapsed;
-            MainPageButton.Visibility = Visibility.Collapsed;
+            PttGrid.Visibility = Visibility.Collapsed;
             FirstGrid.Visibility = Visibility.Visible;
         }
     }
