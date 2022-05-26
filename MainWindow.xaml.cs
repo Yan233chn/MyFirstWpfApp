@@ -84,5 +84,10 @@ namespace WpfApp1
             PttGrid.Visibility = Visibility.Collapsed;
             FirstGrid.Visibility = Visibility.Visible;
         }
+
+        private void PttList_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer.exe", "https://wiki.arcaea.cn/index.php/%E5%AE%9A%E6%95%B0%E8%A1%A8");
+        }
     }
 }

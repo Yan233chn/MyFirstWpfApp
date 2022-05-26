@@ -44,12 +44,12 @@
 
         <TextBlock x:Name="Title" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,10,0,0" Width="100" Text="???" FontSize="20"/>
         <TextBlock x:Name="Result" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,13,0,0" Width="250" Text="" FontSize="16" TextAlignment="Center"/>
-        <Button x:Name="CloseButton" Content="X" HorizontalAlignment="Right" VerticalAlignment="Top" Width="20" Height="20" Margin="0,10,10,0" Click="CloseButton_Click"/>
-        <Button x:Name="MinimizeButton" Content="--" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,40,0" Width="20" Height="20" FontWeight="Normal" Click="MinimizeButton_Click"/>
+        <Button x:Name="CloseButton" Content="X" HorizontalAlignment="Right" VerticalAlignment="Top" Width="20" Margin="0,10,10,0" Click="CloseButton_Click"/>
+        <Button x:Name="MinimizeButton" Content="--" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,40,0" Width="20" FontWeight="Normal" Click="MinimizeButton_Click"/>
 
         <Grid x:Name="FirstGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="100">
             <TextBox x:Name="FirstTextBox" Width="160" TextAlignment="Center" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,24,0,0"/>
-            <Button x:Name="ConfirmButton" Content="Confirm" Click="Button_Click" FontSize="16" Width="70" Height="24" HorizontalAlignment="Center" VerticalAlignment="Bottom" IsDefault="True"/>
+            <Button x:Name="ConfirmButton" Content="Confirm" Click="Button_Click" FontSize="16" Width="70" HorizontalAlignment="Center" VerticalAlignment="Bottom" IsDefault="True"/>
         </Grid>
 
         <Grid x:Name="PttGrid" HorizontalAlignment="Center" VerticalAlignment="Center" Width="380" Height="180">
@@ -60,7 +60,8 @@
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="分数" Margin="0,75,160,0"/>
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="PTT" Margin="0,105,160,0"/>
             <Button x:Name="CalcButton" Content="计算" HorizontalAlignment="Center" Margin="0,135,0,0" VerticalAlignment="Top" Width="40" Click="CalcButton_Click" IsDefault="True"/>
-            <Button x:Name="MainPageButton" Content="Main Page" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,20,10" Width="72" Height="20" Click="MainPageButton_Click"/>
+            <Button x:Name="PttList" Content="跳转定数表" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="20,0,0,10" Width="72" Click="PttList_Click" Cursor="Hand"/>
+            <Button x:Name="MainPageButton" Content="Main Page" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,20,10" Width="72" Click="MainPageButton_Click"/>
         </Grid>
     </Grid>
 </Window>
