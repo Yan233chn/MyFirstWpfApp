@@ -23,6 +23,8 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+            FirstGrid.Visibility = Visibility.Visible;
+            PttGrid.Visibility = Visibility.Collapsed;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
